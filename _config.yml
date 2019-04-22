@@ -39,7 +39,8 @@ author:
 #  google:
 #    tracking_id: "UA-53402824-1"
 
-include: ["_pages"]
+include: 
+    - _pages
 
 footer:
   links:
