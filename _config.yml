@@ -24,12 +24,12 @@ author:
   bio      : "I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing."
   location : "Prague, CZ" 
   links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/klarasimi"    
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/klarasimi"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/klarasimi"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/klarasimickova"
@@ -38,6 +38,19 @@ author:
 #  provider: "google-gtag"
 #  google:
 #    tracking_id: "UA-53402824-1"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/klarasimi"    
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/klarasimi"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/klarasimickova"
+
 
 defaults:
   # _posts
