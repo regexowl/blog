@@ -1,41 +1,47 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+url: https://blog.klarasimi.dev
+title: "From Marketing to Tech"
+name: 'Klara Simickova'
+locale: "en-GB"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: From Marketing To Tech 
-# email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "blog.klarasimi.dev" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: klarasimi
-github_username:  klarasimi
-
-# Build settings
-markdown: kramdown
-theme: minima
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+ 
+remote_theme: "mmistakes/minimal-mistakes@4.14.2"
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+breadcrumbs: false
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+author:
+  name     : "Klára Šimíčková"
+  avatar   : "/assets/images/profile-pic.jpeg"
+  bio      : "I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing."
+  location : "Prague, CZ" 
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/klarasimi"
+
+# analytics:
+#  provider: "google-gtag"
+#  google:
+#    tracking_id: "UA-53402824-1"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: false
+related: false
