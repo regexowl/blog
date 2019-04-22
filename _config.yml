@@ -20,7 +20,7 @@ paginate_path: /page:num/
 
 author:
   name     : "Klára Šimíčková"
-  avatar   : "/images/profile_photo.jpeg"
+  avatar   : "/images/profile_photo.jpg"
   bio      : "I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing."
   location : "Prague, CZ" 
   links:
