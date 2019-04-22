@@ -13,14 +13,14 @@ plugins:
  
 remote_theme: "mmistakes/minimal-mistakes@4.14.2"
 
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+minimal_mistakes_skin: "contrast" # "air", "aqua", "default", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 breadcrumbs: false
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 
 author:
   name     : "Klára Šimíčková"
-  avatar   : "/assets/images/profile-pic.jpeg"
+  avatar   : "/images/profile_photo.jpeg"
   bio      : "I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing."
   location : "Prague, CZ" 
   links:
