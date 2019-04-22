@@ -27,6 +27,12 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/klarasimi"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/klarasimi"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+url: "https://linkedin.com/in/klarasimickova"
 
 # analytics:
 #  provider: "google-gtag"
