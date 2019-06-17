@@ -11,9 +11,9 @@ plugins:
   - jemoji
   - jekyll-include-cache
  
-remote_theme: "mmistakes/minimal-mistakes@4.14.2"
+remote_theme: mmistakes/so-simple-theme
 
-minimal_mistakes_skin: "contrast" # "air", "aqua", "default", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+# minimal_mistakes_skin: "contrast" # "air", "aqua", "default", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 breadcrumbs: false
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
