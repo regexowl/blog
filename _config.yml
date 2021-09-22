@@ -1,6 +1,6 @@
-url: https://blog.klarasimi.dev
+url: https://blog.regexowl.com
 title: "On a rocky road to tech"
-name: 'Klara Simickova'
+name: 'regexowl'
 locale: "en-GB"
 
 plugins:
@@ -19,17 +19,17 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 
 author:
-  name     : "Klára Šimíčková"
+  name     : "regexowl"
   avatar   : "/assets/profile-photo.jpg"
   bio      : "I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing."
-  location : "Prague, CZ" 
+  location : "Utrecht, NL" 
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/klarasimi"    
+      url: "https://github.com/regexowl"    
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/klarasimi"
+      url: "https://twitter.com/regexowl"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/klarasimickova"
@@ -46,10 +46,10 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/klarasimi"    
+      url: "https://github.com/regexowl"    
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/klarasimi"
+      url: "https://twitter.com/regexowl"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/klarasimickova"
@@ -62,7 +62,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       read_time: true
       comments: false
       share: false
