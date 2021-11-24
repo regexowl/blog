@@ -1,5 +1,5 @@
 url: https://blog.regexowl.com
-title: "On a rocky road to tech"
+title: "Exploring the world of tech"
 name: 'regexowl'
 locale: "en-GB"
 
@@ -21,7 +21,7 @@ paginate_path: /page:num/
 author:
   name     : "regexowl"
   avatar   : "/assets/profile-photo.jpg"
-  bio      : "I left marketing to find my place in tech. Wish me luck, for I have not a slight idea what I am doing."
+  bio      : "Hi there, I'm Klára!"
   location : "Utrecht, NL" 
   links:
     - label: "GitHub"
