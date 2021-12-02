@@ -4,7 +4,7 @@ subtitle: "two steps at a time"
 name: 'regexowl'
 locale: "en-GB"
 logo: "/assets/profile-photo.jpg"
-skin: "/assets/css/skins/dark.css"
+# skin: "/assets/css/skins/dark.css"
 
 plugins:
   - jekyll-paginate
