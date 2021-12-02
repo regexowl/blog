@@ -3,3 +3,7 @@ main:
     url: /about/
   - title: "Home"
     url: /
+  - title: "Open Source"
+    url: /opensource/
+  - title: "Cybersec"
+    url: /cybersec/
