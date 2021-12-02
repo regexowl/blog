@@ -3,6 +3,7 @@ title: "Exploring the world of tech"
 subtitle: "two steps at a time"
 name: 'regexowl'
 locale: "en-GB"
+logo: "/assets/profile-photo.jpg"
 
 plugins:
   - jekyll-paginate
