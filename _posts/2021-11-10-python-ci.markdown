@@ -2,7 +2,7 @@
 layout: post
 title:  "Python CI with GitHub Actions"
 permalink: /python-ci-with-github-actions/
-categories: CI
+categories: Projects
 tags: 
   - CI
   - GitHub Actions
