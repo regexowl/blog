@@ -20,9 +20,9 @@ He introduced me to Content Resolver, a project under Fedora. And since I love o
 At the start we asked ourselves: "What is the most basic thing we can later build on?" We decided on seting up a workflow using Github Actions that will trigger on every pull request and simply run the full build.
 
 From the start I was aware of some constraints and challenges:
-
 - the build needs to run on Fedora
 - there should be a place for adding more complex set of tests in the future
+
 
 GitHub Actions only supports Ubuntu. But it can also run containers. So the simplest solution was to run all the jobs in the workflow in a Fedora container. The setup was quite quick:
 
