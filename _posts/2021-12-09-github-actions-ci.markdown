@@ -11,9 +11,7 @@ tags:
   - containers
 ---
 
-Recently I started exploring continuous integration and even [created an example project.](https://github.com/regexowl/test-of-testing)
-
-With the basic knowledge of the topic, I started looking for an opportunity to implement a CI in "real life". Luckily I knew just the right person who was interested in setting up automated testing for one of his projects.
+Recently I started exploring continuous integration and even [created an example project.](https://github.com/regexowl/test-of-testing) With the basic knowledge of the topic, I started looking for an opportunity to implement a CI in "real life". Luckily I knew just the right person who was interested in setting up automated testing for one of his projects.
 
 He introduced me to Content Resolver, a project under Fedora. And since I love open source I immediately took the opportunity. Soon I had [an issue assigned to me](https://github.com/minimization/content-resolver/issues/32) and was ready to dive head first into my first "real" CI project.
 
