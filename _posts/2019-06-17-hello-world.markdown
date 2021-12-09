@@ -1,6 +1,11 @@
 ---
 layout: post
-title:  "Hello World!"
-categories: update
+title:  "Python CI with GitHub Actions"
+permalink: /python-ci-with-github-actions/
+categories: CI
+tags: 
+  - CI
+  - GitHub Actions
+  - Python
 ---
-This is just a test.
+I'm learning about continuous integration. And because the best way for me to learn is hands-on, I created a project on GitHub to find out how this thing works. If you're interested in a very simple demonstration of setting up GitHub Actions to test Python, [my test-of-testing project on GitHub](https://github.com/regexowl/test-of-testing) has a detailed readme explaining every step of the process.
