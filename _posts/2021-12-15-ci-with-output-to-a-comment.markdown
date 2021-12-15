@@ -26,7 +26,7 @@ From the start I needed to work out a few technicalities:
 
 The setup uses a Fedora container run under the Ubuntu runner.
 
-```other
+```yaml
 jobs:
   setup_and_test:
     runs-on: ubuntu-latest
