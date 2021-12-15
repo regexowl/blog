@@ -20,9 +20,10 @@ The whole idea is that in the [code repository](https://github.com/minimization/
 The maintainer of the project and the contributor are within few minutes able to see, if there’s anything that would need to be fixed.
 
 From the start I needed to work out a few technicalities:
-- there are two repositories (input one with the configs and then one with the main code) and there shouldn't be any duplicities in the code
-- the results of the workflow run should be put into a PR comment
-
+<ul>
+<li>- there are two repositories (input one with the configs and then one with the main code) and there shouldn't be any duplicities in the code</li>
+<li>- the results of the workflow run should be put into a PR comment</li>
+<\ul>
 
 The setup uses a Fedora container run under the Ubuntu runner.
 
