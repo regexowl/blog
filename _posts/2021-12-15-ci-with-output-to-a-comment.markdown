@@ -15,7 +15,7 @@ The Content Resolver project under Fedora consists of two repositories, one of t
 
 I have implemented a CI with GitHub Actions which checks the config files for possible problems using a function already implemented in the code repository. 
 
-The whole idea is that in the [https://github.com/minimization/content-resolver](code repository), there is a short script `test_config_files.py` added, that calls only one function from the project. Function `get_configs()` which is already implemented in the `feedback_pipeline.py` and which checks if the configuration files are valid and complete. This function is run with a set of mock settings defined in the short script. The results of the function are then parsed within the GitHub Actions workflow and output as a PR comment. 
+The whole idea is that in the [code repository](https://github.com/minimization/content-resolver), there is a short script `test_config_files.py` added, that calls only one function from the project. Function `get_configs()` which is already implemented in the `feedback_pipeline.py` and which checks if the configuration files are valid and complete. This function is run with a set of mock settings defined in the short script. The results of the function are then parsed within the GitHub Actions workflow and output as a PR comment. 
 
 The maintainer of the project and the contributor are within few minutes able to see, if there’s anything that would need to be fixed.
 
@@ -35,7 +35,7 @@ jobs:
 ```
 
 
-There are two repositories which I need for this workflow to run. With the [https://github.com/minimization/content-resolver](code repository) containing the [https://github.com/minimization/content-resolver-input](input repository) with configuration files. I’ve used checkout with a specified path to nest them as needed. 
+There are two repositories which I need for this workflow to run. With the [code repository](https://github.com/minimization/content-resolver) containing the [input repository](https://github.com/minimization/content-resolver-input) with configuration files. I’ve used checkout with a specified path to nest them as needed. 
 
 ```yaml
     - name: Checkout code repo
@@ -53,7 +53,7 @@ There are two repositories which I need for this workflow to run. With the [http
 
 Up to this point everything seemed quite straightforward, but the real fun was coming. The only thing left was to output the results of the `get_configs()` into a comment under the pull request. But after a test run I’ve noticed the workflow never output more than the first line of the results. 
 
-After some experiments I found out, that working with multiline strings in GitHub Actions is a bit problematic. Whitespace characters are parsed in a way that it wasn’t possible to output a block of text. When searching for a solution, I've stumbled upon [https://trstringer.com/github-actions-multiline-strings/](this blogpost) introducing several options to bypass this problem.
+After some experiments I found out, that working with multiline strings in GitHub Actions is a bit problematic. Whitespace characters are parsed in a way that it wasn’t possible to output a block of text. When searching for a solution, I've stumbled upon [this blogpost](https://trstringer.com/github-actions-multiline-strings/) introducing several options to bypass this problem.
 
 The solution I chose in the end was sanitisation of the string or string substitution since it's close to regex and I couldn’t possibly pass on that.
 
@@ -89,4 +89,4 @@ Finally I needed to print the output into a PR comment. For this there's an easy
 ```
 
 
-You can see the resulting PR comment of the workflow [https://github.com/regexowl/content-resolver-input/pull/50](in this demonstration).
+You can see the resulting PR comment of the workflow [in this demonstration](https://github.com/regexowl/content-resolver-input/pull/50).
