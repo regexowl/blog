@@ -2,8 +2,6 @@
 layout: post
 title:  "GitHub Actions CI with an output to a comment for pull request"
 permalink: /github-actions-ci-with-an-output-to-a-comment-for-pull-request/
-image: 
-  thumbnail: /images/2021-12-15-400x225.png
 categories: Projects
 tags: 
   - CI
