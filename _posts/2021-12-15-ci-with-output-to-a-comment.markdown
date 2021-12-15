@@ -38,16 +38,16 @@ jobs:
 There are two repositories which I need for this workflow to run. With the [code repository](https://github.com/minimization/content-resolver) containing the [input repository](https://github.com/minimization/content-resolver-input) with configuration files. I’ve used checkout with a specified path to nest them as needed. 
 
 ```yaml
-    - name: Checkout code repo
-      uses: actions/checkout@v2
-      with:
-        repository: minimization/content-resolver
-        path: code
+- name: Checkout code repo
+  uses: actions/checkout@v2
+  with:
+    repository: minimization/content-resolver
+    path: code
     
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        path: code/input
+- name: Checkout
+  uses: actions/checkout@v2
+  with:
+    path: code/input
 ```
 
 
@@ -60,32 +60,32 @@ The solution I chose in the end was sanitisation of the string or string substit
 The contents of the variable `RESULTS` (multiline string) is url encoded and then returned which makes it one really long string for the workflow, but in the final http encoding it looks just like needed.
 
 ```yaml
-    - name: Run get_configs and set output
-      run: |
-        cd code
-        RESULTS=$(python3 test_config_files.py 2>&1)
-        RESULTS="${RESULTS//'%'/'%25'}"
-        RESULTS="${RESULTS//$'\n'/'%0A'}"
-        RESULTS="${RESULTS//$'\r'/'%0D'}"
-        echo "::set-output name=PR_COMMENT::$RESULTS"
-      id: get_configs_output
+- name: Run get_configs and set output
+  run: |
+    cd code
+    RESULTS=$(python3 test_config_files.py 2>&1)
+    RESULTS="${RESULTS//'%'/'%25'}"
+    RESULTS="${RESULTS//$'\n'/'%0A'}"
+    RESULTS="${RESULTS//$'\r'/'%0D'}"
+    echo "::set-output name=PR_COMMENT::$RESULTS"
+  id: get_configs_output
 ```
 
 
 Finally I needed to print the output into a PR comment. For this there's an easy solution using GitHub API. The only trickier part was showing the output as a block of code in the comment itself. Since javascript uses backticks to define a multiline comment and the block of code in markdown syntax also uses backticks, I needed to nest them with some strategic escaping.
 
 ```yaml
-    - name: Comment on the PR
-      uses: actions/github-script@v5
-      with: 
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: `\`\`\`\n${{ steps.get_configs_output.outputs.PR_COMMENT }}\n\`\`\``   
-          })
+- name: Comment on the PR
+  uses: actions/github-script@v5
+  with: 
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+    script: |
+      github.rest.issues.createComment({
+        issue_number: context.issue.number,
+        owner: context.repo.owner,
+        repo: context.repo.repo,
+        body: `\`\`\`\n${{ steps.get_configs_output.outputs.PR_COMMENT }}\n\`\`\``   
+      })
 ```
 
 
